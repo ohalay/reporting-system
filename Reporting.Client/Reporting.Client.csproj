@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>3a437d78-6f1c-4a79-ab25-8688c1b5b28e</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ardalis.ApiEndpoints" Version="4.0.1" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.9.21" />
+    <PackageReference Include="AWSSDK.SQS" Version="3.7.2.74" />
+  </ItemGroup>
+
+</Project>

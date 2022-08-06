@@ -1,0 +1,15 @@
+
+@baseUrl=http://localhost:5182/api
+@userId=my-demo-user
+
+### Get all reports for user
+GET {{baseUrl}}/reports?userId={{userId}}
+
+### Send ping command
+POST {{baseUrl}}/ping-command
+content-type: application/json
+
+{
+    "UserId": "{{userId}}",
+    "ReportType": "Pdf"
+}
