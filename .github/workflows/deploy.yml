@@ -17,8 +17,8 @@ jobs:
         with:
           node-version: "14"
           
-      - name: Run tests
-        run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+      # - name: Run tests
+      #   run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
       
       - name: Configure aws credentials
         uses: aws-actions/configure-aws-credentials@master
@@ -30,8 +30,5 @@ jobs:
       - name: Install CDK
         run: npm install -g aws-cdk
       
-      - name: Navigate to IaC
-        run: cd IaC
-      
-      - name: Deploy to aws
-        run: cdk deploy demo-reporting-dev
+      - name: Deploy to AWS
+        run: cd IaC && cdk deploy demo-reporting-dev --require-approval never
